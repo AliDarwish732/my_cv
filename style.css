@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  width: 35%;
+  padding: 25px;
+}
+
+.sidebar .profile {
+  text-align: center;
+}
+
+.sidebar .profile img {
+  width: 300px;
+  height: 250px;
+  border-radius: 40%;
+  object-fit: cover;
+  border: 3px solid white;
+  
+}
+
+.sidebar .profile h2 {
+  margin: 15px 0 5px;
+}
+
+.sidebar .profile p {
+  color: #00b4d8;
+}
+
+.sidebar .section {
+  margin-top: 30px;
+}
+
+.sidebar .section h3 {
+  border-bottom: 2px solid #00b4d8;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 8px 0;
+}
+
+/* Main */
+.main {
+  width: 65%;
+  padding: 35px;
+}
+
+.main .section {
+  margin-bottom: 35px;
+}
+
+.main .section h3 {
+  background-color: #003566;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.item {
+  margin-top: 10px;
+}
+
+.item h4 {
+  color: #003566;
+}
+
+.item p {
+  margin: 4px 0;
+}
+
+/* Skill Bars */
+.skill {
+  margin: 12px 0;
+}
+
+.skill .bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.skill .fill {
+  background: #003566;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .container {
+  background-color: #000000;
+}
+
+body.dark-mode .sidebar {
+  background-color:  #002b5b;
+}
+
+body.dark-mode .main .section h3 {
+  background-color: #0d3b66;
+}
+
+body.dark-mode .skill .fill {
+  background-color: #0d3b66;
+}
+
+
+/* Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 15px;
+  background-color:  #002b5b;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.profile img:hover{      
+background-color: #f7ffe6;
+
+    
+}
+
+.dark-mode-toggle:hover {
+  background-color: #00509d;
+  
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar .profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main .section h3 {
+    font-size: 18px;
+  }
+
+  .item h4 {
+    font-size: 16px;
+ }
+}
